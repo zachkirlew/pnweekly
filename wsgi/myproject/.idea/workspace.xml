@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3c76efe4-ded0-453b-bd94-9db288a15915" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/ArticleSerializer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/apps.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/management/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/management/commands/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/management/commands/getarticles.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0002_auto_20171129_1035.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0003_auto_20171204_1738.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0004_auto_20171204_1804.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0005_auto_20171204_1830.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0006_remove_comment_time.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0007_auto_20171204_1945.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0008_article_url.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0009_preference.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0010_auto_20171209_2057.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0011_article_category.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/0012_auto_20171210_1816.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/animate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/article.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/articles.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/blog-home.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/images/favicon-16x16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/images/favicon-32x32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/images/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/images/user.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/static/users.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/articles/article-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/articles/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/templated_email/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/templated_email/article_alert.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/templated_email/article_alert.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/users/account.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/users/alerts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/users/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/users/not-logged-in.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/templates/users/signup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/articles/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/manage.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/myproject/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/myproject/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/myproject/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/myproject/wsgi.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/css/changelists.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/css/fonts.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/css/forms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/css/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/css/widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/fonts/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/fonts/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/fonts/Roboto-Bold-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/fonts/Roboto-Light-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/fonts/Roboto-Regular-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/calendar-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/gis/move_vertex_off.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/gis/move_vertex_on.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-addlink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-alert.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-calendar.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-changelink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-clock.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-deletelink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-no.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-unknown-alt.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-unknown.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/icon-yes.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/inline-delete.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/search.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/selector-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/sorting-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/tooltag-add.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/img/tooltag-arrowright.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/SelectBox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/SelectFilter2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/actions.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/cancel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/change_form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/collapse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/inlines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/inlines.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/jquery.init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/popup_response.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/prepopulate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/prepopulate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/prepopulate_init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/timeparse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/urlify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/vendor/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/vendor/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/vendor/xregexp/xregexp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/admin/js/vendor/xregexp/xregexp.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/animate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/article.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/articles.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/blog-home.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/cookielaw/css/cookielaw.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/cookielaw/img/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/cookielaw/js/cookielaw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/images/favicon-16x16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/images/favicon-32x32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/images/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/images/user.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/static/users.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pn_weekly/wsgi.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/apps.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/forms.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0002_alertpreference.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0003_auto_20171209_2107.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/0004_auto_20171209_2110.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/users/views.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.openshift/action_hooks/deploy" afterPath="$PROJECT_DIR$/../../.openshift/action_hooks/deploy" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="16" />
+    <option name="y" value="23" />
+    <option name="width" value="1420" />
+    <option name="height" value="873" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.myproject">
+    <configuration name="myproject" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="pn_weekly.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="myproject" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c76efe4-ded0-453b-bd94-9db288a15915" name="Default" comment="" />
+      <created>1512938216120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1512938216120</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="16" y="23" width="1420" height="873" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980132" sideWeight="0.50290275" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980132" sideWeight="0.49709725" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
