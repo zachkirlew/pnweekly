@@ -25,7 +25,7 @@ import sys
 sys.path.append(os.path.join(REPO_DIR, 'libs'))
 import json
 
-ALLOWED_HOST = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk','127.0.0.1', 'localhost', 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk']
+ALLOWED_HOSTS = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk','127.0.0.1', 'localhost', 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk']
 
 
 # Quick-start development settings - unsuitable for production
