@@ -25,7 +25,7 @@ import sys
 sys.path.append(os.path.join(REPO_DIR, 'libs'))
 import json
 
-
+ALLOWED_HOST = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk','127.0.0.1', 'localhost', 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk']
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,7 +35,7 @@ import json
 SECRET_KEY = 'lv0*cph(@)w&nv=9d1a4^_=d+!&+5bi1bdu)^8bcx6-+!z=4r&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 
 
 
 
