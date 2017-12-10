@@ -1,0 +1,16 @@
+body {
+  padding-top: 54px;
+}
+
+/*Fix collapsing navbar bug*/
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
+
+
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
