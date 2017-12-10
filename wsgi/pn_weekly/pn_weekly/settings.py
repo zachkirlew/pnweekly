@@ -33,7 +33,7 @@ import json
 SECRET_KEY = 'lv0*cph(@)w&nv=9d1a4^_=d+!&+5bi1bdu)^8bcx6-+!z=4r&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.mysite.com']
 
