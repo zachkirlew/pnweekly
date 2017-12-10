@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+
+                        <div class="row">
+
+                            <div class="jumbotron animated tada">
+                                <h1 class="display-3">Woah! Slow down homie!</h1>
+                                <p class="lead">You gotta be logged in to view this page.</p>
+                                <a href="/user_login/" role="button">Login</a>
+                                <hr class="my-4">
+                                <p>Haven't got an account?</p>
+                                <a href="/signup/" role="button">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/col-->
+            </div>
+            <!--/row-->
+        </div>
+    </div>
+{% endblock %}

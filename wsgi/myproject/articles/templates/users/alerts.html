@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <!-- form card login -->
+                                <div class="card card-outline-secondary">
+                                    <div class="card-header">
+                                        <h3 class="mb-0">Edit email alerts</h3>
+                                    </div>
+                                    <div class="card-block" style="padding: 30px;">
+                                        <p class="card-text">Check the categories below to receive
+                                            email alerts when new articles of that category are posted.</p>
+                                        <form autocomplete="off" id="form-edit-alerts" method="POST" class="">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" id="checkbox-business"
+                                                                  value="Business"
+                                                                  {% if user.business %}checked{% endif %}>
+                                                        Business</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" id="checkbox-music" value="Music"
+                                                                  {% if user.music %}checked{% endif %}> Music</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" id="checkbox-sport" value="Sport"
+                                                                  {% if user.sport %}checked{% endif %}> Sport</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" id="checkbox-technology"
+                                                                  value="Technology"
+                                                                  {% if user.technology %}checked{% endif %}> Technology</label>
+                                                                                                    <span id='edit-account-info'></span>
+
+
+                                                </div>
+                                            <span id='edit-alerts-info'></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary" value="">Save Changes
+                                                </button>
+                                                <span></span>
+                                                <button type="button" id="button-checkbox-clear" class="btn btn-danger">
+                                                    Clear
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!--/card-block-->
+                                </div>
+                                <!-- /form card login -->
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/col-->
+                </div>
+                <!--/row-->
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

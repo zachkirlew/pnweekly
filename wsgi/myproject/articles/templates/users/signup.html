@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Sign up{% endblock %}
+{% block content %}
+    {% load staticfiles %}
+    <div class="container-fluid">
+        <div class="container">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="row">
+
+                            <div class="col-md-6 offset-md-3">
+                                <!-- form card register -->
+                                <div class="card card-outline-secondary">
+                                    <div class="card-header">
+                                        <h3 class="mb-0">Sign Up</h3>
+                                    </div>
+                                    <div class="card-block" style="padding: 30px;">
+                                        <form class="form" role="form" autocomplete="off" method='POST'
+                                              action="/register/">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="inputFirstName">First name</label>
+                                                <input type="text" class="form-control" id="inputFirstName"
+                                                       name="first_name"
+                                                       placeholder="Jane" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputLastName">Last name</label>
+                                                <input type="text" class="form-control" id="inputLastName"
+                                                       name="last_name"
+                                                       placeholder="Doe" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail">Email</label>
+                                                <input type="email" class="form-control" id="inputEmail" name="email"
+                                                       placeholder="janedoe@pnweekly.com" required>
+                                            </div>
+                                            <span id='info'></span>
+                                            <div class="form-group">
+                                                <label for="inputPhone">Phone number</label>
+                                                <div class="input-group mb-2 mb-sm-0">
+                                                    <div class="input-group-addon">+</div>
+                                                    <input  maxlength="12" required type="text" class="form-control" id="inputPhone" name="phone"
+                                                           placeholder="440123456789">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword">Password</label>
+                                                <input type="password" class="form-control" id="inputPassword"
+                                                       name="password"
+                                                       placeholder="Password" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <button id="button-signup-submit" type="submit"
+                                                        class="btn btn-primary float-right">
+                                                    Register
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- /form card register -->
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/col-->
+                </div>
+                <!--/row-->
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

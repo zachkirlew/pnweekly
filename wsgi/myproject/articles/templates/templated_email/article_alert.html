@@ -1,0 +1,54 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+              integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+              crossorigin="anonymous">
+
+    </head>
+    <body>
+
+    <div class="jumbotron">
+        <div class="container-fluid">
+            <h1>Hey {{ user.first_name }}.</h1>
+            <p>We have got all these great new {{ alert_categories}} articles that you just might be interested in...</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <h1 class="my-4">Your news this week:</h1>
+
+        <div class="row">
+        <div class="card-deck">
+
+            {% for article in articles %}
+                <div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="card">
+                        <a href="{{ url }}/article_detail/{{ article.id }}"><img class="card-img-top" height="200px" src="{{ article.image_url }}" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="{{ url }}/article_detail/{{ article.id }}">{{ article.title }}</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+        <hr>
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <p>To change your email settings, please login to your account and go to alerts.</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+    </body>
+    </html>

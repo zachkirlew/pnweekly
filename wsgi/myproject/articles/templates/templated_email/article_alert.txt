@@ -1,0 +1,1 @@
+Hello {{ user.first_name }} - new interesting articles have been added to PN Weekly!

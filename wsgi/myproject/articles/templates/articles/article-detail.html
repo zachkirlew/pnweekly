@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!--Hidden article id for ajax query-->
+    <p hidden id="article-id">{{ article.id }}</p>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row justify-content-md-center">
+
+            <!-- Post Content Column -->
+            <div class="col-lg-10 ">
+
+                <!-- Article Main Content-->
+                <div id="container-article-main">
+                    <h1 class="mt-4">{{ article.title }}</h1>
+                    <p class="lead">by {{ article.author }}</p>
+                    <hr>
+                    <p>{{ article.published_at }}</p>
+                    <hr>
+                    <img class="img-fluid rounded" src="{{ article.image_url }}" alt="">
+                    <hr>
+                    <p class="lead">{{ article.description }}</p>
+                    <hr>
+
+                </div>
+
+                <!-- Comments Form -->
+                <div class="card my-4">
+                    <h5 class="card-header">Leave a Comment:</h5>
+                    <div class="card-body">
+                        <form>
+                            {% if request.user.is_authenticated %}
+                                <input hidden id="user-id-likes"/>
+                                <div class="form-group">
+                                <textarea id="input-comment-text" name="comment" class="form-control"
+                                          rows="3"></textarea>
+                                </div>
+
+                            {% else %}
+                                <div class="form-group">
+                                <textarea readonly id="input-comment-text" name="comment" class="form-control"
+                                          rows="3"></textarea>
+                                </div>
+                            {% endif %}
+                            {% csrf_token %}
+                            <button id="button-submit-comment" type="submit" class="btn btn-primary">Submit</button>
+                            {% if request.user in article.likes.all  %}
+                                <button id="button-like-article" style="color: #007BFF;" type="button"
+                                        class="btn rounded">
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                </button>
+                            {% else %}
+                                <button id="button-like-article" style="color:#CCCCCC;" type="button"
+                                        class="btn rounded">
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                </button>
+                            {% endif %}
+                            <input id="text-like-count" style="border: 0;" class="text no-border" name="likes"
+                                   readonly="readonly" type="text" value="{{ article.likes.count }}"/>
+                        </form>
+                    </div>
+                </div>
+                <div id="container-comments">
+                    {% for comment in comments %}
+                        <div id="comment_{{ comment.id }}" class="media mb-4">
+                            <img height="50" width="50" class="d-flex mr-3 rounded-circle avatar"
+                                 src="{% static 'images/user.png' %}" alt="">
+                            <div class="media-body col-md-10"><h5 class="mt-0">{{ comment.user.get_full_name }}</h5>
+                                <p>{{ comment.text }}</p>
+                            </div>
+
+                            {% if request.user.id == comment.user.id %}
+                                <div class="media-body col-md-2">
+                                    <button id="button-delete-comment" type="button"
+                                            class="btn btn-danger btn-sm delete-button">Delete
+                                    </button>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <script src="{% static 'article.js' %}"></script>
+
+{% endblock %}
