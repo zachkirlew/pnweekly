@@ -15,6 +15,16 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+DJ_PROJECT_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
+WSGI_DIR = os.path.dirname(BASE_DIR)
+REPO_DIR = os.path.dirname(WSGI_DIR)
+DATA_DIR = os.environ.get('OPENSHIFT_DATA_DIR', BASE_DIR)
+
+import sys
+sys.path.append(os.path.join(REPO_DIR, 'libs'))
+import json
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
