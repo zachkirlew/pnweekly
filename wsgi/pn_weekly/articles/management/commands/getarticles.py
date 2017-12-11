@@ -117,7 +117,7 @@ def deserialize_news_data(data):
         url = data['articles'][i]['url']
         published_at_str = str(data['articles'][i]['publishedAt'])
 
-        print(title)
+
 
         try:
             published_at = datetime.datetime.strptime(published_at_str, '%Y-%m-%dT%H:%M:%SZ')
