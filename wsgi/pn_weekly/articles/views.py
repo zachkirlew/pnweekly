@@ -16,7 +16,7 @@ def index(request):
     filter_category = request.GET.get('filter_category')
 
     if filter_category:
-        articles = Article.objects.filter(category=filter_category)
+        articles = Article.objects.filter(category=filter_category).order_by('-published_at')
     else:
         articles = Article.objects.all().order_by('-published_at')
 
