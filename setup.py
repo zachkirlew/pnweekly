@@ -19,7 +19,8 @@ setup(
     install_requires=[
         'Django==1.11.5',
         'django-cookie-law==1.0.13',
-        'djangorestframework==3.7.3'
+        'djangorestframework==3.7.3',
+        'requests==2.18.4'
     ],
     dependency_links=[
         'https://pypi.python.org/simple/django/'
