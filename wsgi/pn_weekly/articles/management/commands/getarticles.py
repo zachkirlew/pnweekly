@@ -63,13 +63,13 @@ class Command(BaseCommand):
                     try:
                         self.stdout.write(self.style.WARNING("About to send email to %s" % user.email))
 
-                        # send_mail(
-                        #     'New articles have been posted! ',
-                        #     'Hey ' + user.first_name + ' new interesting articles you will be interested in have been posted!',
-                        #     'PN Weekly',
-                        #     [user.email],
-                        #     html_message=msg_html
-                        # )
+                        send_mail(
+                            'New articles have been posted! ',
+                            'Hey ' + user.first_name + ' new interesting articles you will be interested in have been posted!',
+                            'PN Weekly',
+                            [user.email],
+                            html_message=msg_html
+                        )
 
                         self.stdout.write(self.style.SUCCESS('Successfully sent email to "%s"' % user.email))
                     except Exception:
