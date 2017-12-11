@@ -1,8 +1,6 @@
 import datetime
 
 import requests
-from django.conf import settings
-from django.core.mail import send_mail
 from django.core.management import BaseCommand, CommandError
 from django.db.models import Q
 from django.template.loader import render_to_string
@@ -57,9 +55,10 @@ class Command(BaseCommand):
 
                     user_articles.sort(key=lambda article: article.published_at, reverse=True)
 
+
                     msg_html = render_to_string('templated_email/article_alert.html', {'user': user,
                                                                                        'articles': user_articles,
-                                                                                       'url': 'http://127.0.0.1:8000',
+                                                                                       'url': 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk/',
                                                                                        'alert_categories': alert_categories})
 
                     try:
