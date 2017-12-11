@@ -19,17 +19,11 @@ DJ_PROJECT_DIR = os.path.dirname(__file__)
 BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
 WSGI_DIR = os.path.dirname(BASE_DIR)
 REPO_DIR = os.path.dirname(WSGI_DIR)
-DATA_DIR = os.environ.get('OPENSHIFT_DATA_DIR', BASE_DIR)
 
 import sys
 sys.path.append(os.path.join(REPO_DIR, 'libs'))
 import json
 
-try:
-    with open(os.path.join(DATA_DIR, 'secrets.json')) as handle:
-        SECRETS = json.load(handle)
-except IOError:
-    SECRETS = { 'secret_key': 'a' }
 
 ALLOWED_HOSTS = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk','127.0.0.1', 'localhost', 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk']
 
@@ -41,7 +35,7 @@ ALLOWED_HOSTS = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk','127.0.0.1', 'l
 SECRET_KEY = 'lv0*cph(@)w&nv=9d1a4^_=d+!&+5bi1bdu)^8bcx6-+!z=4r&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 
