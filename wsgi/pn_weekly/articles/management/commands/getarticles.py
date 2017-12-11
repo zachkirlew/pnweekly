@@ -59,7 +59,6 @@ class Command(BaseCommand):
                                                                                        'articles': user_articles,
                                                                                        'url': 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk/',
                                                                                        'alert_categories': alert_categories})
-
                     try:
                         self.stdout.write(self.style.WARNING("About to send email to %s" % user.email))
 
