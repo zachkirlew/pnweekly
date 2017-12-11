@@ -20,6 +20,8 @@ BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
 WSGI_DIR = os.path.dirname(BASE_DIR)
 REPO_DIR = os.path.dirname(WSGI_DIR)
 
+DATA_DIR = os.environ.get('OPENSHIFT_DATA_DIR', BASE_DIR)
+
 import sys
 sys.path.append(os.path.join(REPO_DIR, 'libs'))
 import json
@@ -102,11 +104,10 @@ WSGI_APPLICATION = 'pn_weekly.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # GETTING-STARTED: change 'db.sqlite3' to your sqlite3 database:
+        'NAME': os.path.join(DATA_DIR, 'db.sqlite3'),
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
