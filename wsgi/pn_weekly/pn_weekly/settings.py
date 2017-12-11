@@ -25,6 +25,12 @@ import sys
 sys.path.append(os.path.join(REPO_DIR, 'libs'))
 import json
 
+try:
+    with open(os.path.join(DATA_DIR, 'secrets.json')) as handle:
+        SECRETS = json.load(handle)
+except IOError:
+    SECRETS = { 'secret_key': 'a' }
+
 ALLOWED_HOSTS = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk','127.0.0.1', 'localhost', 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk']
 
 
@@ -105,6 +111,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 
 # Password validation
