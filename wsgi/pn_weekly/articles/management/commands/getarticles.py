@@ -57,9 +57,6 @@ class Command(BaseCommand):
 
                     user_articles.sort(key=lambda article: article.published_at, reverse=True)
 
-                    for article in user_articles:
-                        print(article.title)
-
                     msg_html = render_to_string('templated_email/article_alert.html', {'user': user,
                                                                                        'articles': user_articles,
                                                                                        'url': 'http://127.0.0.1:8000',
@@ -98,7 +95,6 @@ def get_category_name(source_name):
 # Deserialize and save article objects to db
 def deserialize_news_data(data):
 
-    print(data)
     # list of articles
     articles = []
 
@@ -121,8 +117,6 @@ def deserialize_news_data(data):
         image_url = data['articles'][i]['urlToImage']
         url = data['articles'][i]['url']
         published_at_str = str(data['articles'][i]['publishedAt'])
-
-        print(published_at_str)
 
         try:
             published_at = datetime.datetime.strptime(published_at_str, '%Y-%m-%dT%H:%M:%SZ')
