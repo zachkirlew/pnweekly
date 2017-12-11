@@ -11,7 +11,7 @@ from users.views import logged_in
 appname = 'PN Weekly'
 
 
-# view for index page with filtered results
+# index page
 def index(request):
     filter_category = request.GET.get('filter_category')
 
@@ -77,22 +77,6 @@ def like_article(request):
         return JsonResponse(status=405, data={'status': 'false', 'message': "Method not allowed"})
 
 
-def get_comments(request, article_id):
-    if request.method == "GET":
-
-        comments = Comment.objects.filter(article_id=article_id)  # get all articles from db
-
-        comments = list(comments)  # convert to list object
-
-        serializer = CommentSerializer(comments, many=True)
-
-        return JsonResponse(serializer.data, safe=False)  # return json response
-    else:
-        return JsonResponse(status=405, data={'status': 'false', 'message': "Method not allowed"})
-
-        # POST : like article
-
-
 @logged_in
 def post_comment(request):
     if request.method == "POST":
@@ -139,13 +123,13 @@ def delete_comment(request):
         return JsonResponse(status=405, data={'status': 'false', 'message': "Method not allowed"})
 
 
-# view for index page
+# detail article view
 def article_detail(request, article_id):
     # Get article for context
     article = get_object_or_404(Article, pk=article_id)
 
-    # Get article comments for context
-    comments = Comment.objects.filter(article_id=article_id)  # get all articles from db
+    # Get  all article comments for that article
+    comments = Comment.objects.filter(article_id=article_id)
 
     comments = list(comments)  # convert to list object
 

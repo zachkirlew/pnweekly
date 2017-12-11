@@ -1,6 +1,8 @@
 $(function () {
+    //When user starts typing in email
     $('#inputEmail').keyup(function () {
 
+        //check backend if user exists
         $.ajax({
             type: 'POST',
             url: '/reg_check_user/',

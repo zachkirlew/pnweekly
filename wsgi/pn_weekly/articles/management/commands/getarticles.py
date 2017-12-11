@@ -1,6 +1,7 @@
 import datetime
 
 import requests
+from django.core.mail import send_mail
 from django.core.management import BaseCommand, CommandError
 from django.db.models import Q
 from django.template.loader import render_to_string
@@ -8,8 +9,11 @@ from django.template.loader import render_to_string
 from articles.models import Article
 from users.models import CustomUser
 
+
+# Manage py task that retrieves News from api, saves to
+# database and sends email to users who have alerts turned
+# on
 class Command(BaseCommand):
-    # Show this when the user types help
     help = "Get new articles and updates database"
 
     # A command must define handle()
@@ -54,7 +58,6 @@ class Command(BaseCommand):
 
                     user_articles.sort(key=lambda article: article.published_at, reverse=True)
 
-
                     msg_html = render_to_string('templated_email/article_alert.html', {'user': user,
                                                                                        'articles': user_articles,
                                                                                        'url': 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk/',
@@ -91,7 +94,6 @@ def get_category_name(source_name):
 
 # Deserialize and save article objects to db
 def deserialize_news_data(data):
-
     # list of articles
     articles = []
 
@@ -114,8 +116,6 @@ def deserialize_news_data(data):
         image_url = data['articles'][i]['urlToImage']
         url = data['articles'][i]['url']
         published_at_str = str(data['articles'][i]['publishedAt'])
-
-
 
         try:
             published_at = datetime.datetime.strptime(published_at_str, '%Y-%m-%dT%H:%M:%SZ')

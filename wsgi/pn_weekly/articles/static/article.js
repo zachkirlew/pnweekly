@@ -14,6 +14,7 @@ $(function () {
                 'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
             },
             success: function (data) {
+
                 setLikeCount(data.likes);
 
                 if (data.status)
@@ -48,7 +49,7 @@ $(function () {
         }
     });
 
-    //delegate on comments to handle dynamically added delete buttons
+    //delegate comments container to handle dynamically added delete button on click
     $('#container-comments').on('click', '.delete-button', function (e) {
 
         e.preventDefault();
@@ -67,12 +68,11 @@ $(function () {
                 xhr.setRequestHeader("X-CSRFToken", $("input[name=csrfmiddlewaretoken]").val());
             },
             success: function (jsonResponse) {
-                console.log(jsonResponse);
                 removeCommentFromPage(commentId.substring(8))
 
             },
             error: function (error) {
-                console.log(error.statusText);
+                alert(error.statusText);
             }
         });
     });
@@ -88,7 +88,6 @@ function removeCommentFromPage(commentId) {
     });
 }
 
-//initialize like counter to number of likes in article data
 function setLikeCount(likeCount) {
     $('#text-like-count').val(likeCount)
 }

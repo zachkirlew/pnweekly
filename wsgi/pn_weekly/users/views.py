@@ -7,12 +7,12 @@ from users.models import CustomUser
 
 appname = 'PN Weekly'
 
-
+# display signup page
 def signup(request):
     context = {'appname': appname}
     return render(request, 'users/signup.html', context)
 
-
+# register new user
 def register(request):
     email = request.POST['email']
     password = request.POST['password']
@@ -35,7 +35,7 @@ def register(request):
     login(request, user)
     return HttpResponseRedirect('/')
 
-
+# log user in
 def user_login(request):
     if 'email' not in request.POST:
         context = {'appname': appname}
@@ -102,12 +102,12 @@ def edit_account(request):
         user = CustomUser.objects.get(pk=id)
 
         # if exists, get body data
-        putDict = QueryDict(request.body)
+        put_dict = QueryDict(request.body)
 
         # edit variables
-        user.first_name = putDict.get('firstName')
-        user.last_name = putDict.get('lastName')
-        user.phone_number = putDict.get('phone')
+        user.first_name = put_dict.get('firstName')
+        user.last_name = put_dict.get('lastName')
+        user.phone_number = put_dict.get('phone')
 
         # save to database
         user.save()
@@ -134,6 +134,7 @@ def edit_alerts(request):
         # if exists, get body data
         putDict = QueryDict(request.body)
 
+        # casting required from JavaScript -> Python
         if int(putDict.get('business')) == 1:
             user.business = True
         else:

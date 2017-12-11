@@ -1,7 +1,6 @@
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.core.mail import send_mail
-from django.core.validators import RegexValidator
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
@@ -12,6 +11,7 @@ class CustomUserManager(BaseUserManager):
                      is_staff, is_superuser, **extra_fields):
         # Create user with email and password
         now = timezone.now()
+
         if not email:
             raise ValueError('The given email must be set')
 
