@@ -8,7 +8,6 @@ from django.template.loader import render_to_string
 from articles.models import Article
 from users.models import CustomUser
 
-
 class Command(BaseCommand):
     # Show this when the user types help
     help = "Get new articles and updates database"
