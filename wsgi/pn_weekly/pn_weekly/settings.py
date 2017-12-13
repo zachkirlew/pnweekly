@@ -20,10 +20,8 @@ BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
 WSGI_DIR = os.path.dirname(BASE_DIR)
 REPO_DIR = os.path.dirname(WSGI_DIR)
 
-
-
+MEDIA_ROOT = os.path.join(os.environ.get('OPENSHIFT_DATA_DIR', ''),'media')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DATA_DIR = os.environ.get('OPENSHIFT_DATA_DIR', BASE_DIR)
 
@@ -43,6 +41,7 @@ SECRET_KEY = 'lv0*cph(@)w&nv=9d1a4^_=d+!&+5bi1bdu)^8bcx6-+!z=4r&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
 
 # Email config
 EMAIL_HOST = 'smtp.sendgrid.net'

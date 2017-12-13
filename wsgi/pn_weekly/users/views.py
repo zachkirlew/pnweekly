@@ -96,7 +96,8 @@ def logout(request):
 
 @logged_in
 def account(request):
-    return render(request, 'users/account.html')
+
+    return render(request, 'users/account.html',{'media_url':settings.MEDIA_ROOT})
 
 
 @logged_in

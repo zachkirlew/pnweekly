@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 from articles.ArticleSerializer import ArticleSerializer, CommentSerializer
 from articles.models import Article, Comment
+from pn_weekly import settings
 from users.models import CustomUser
 from users.views import logged_in
 
