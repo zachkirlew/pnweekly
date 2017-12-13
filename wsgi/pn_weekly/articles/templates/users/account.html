@@ -22,7 +22,10 @@
                                                         <form action="{% url 'upload_pic' %}" method="post"
                                                               enctype="multipart/form-data" id="form-upload-image">
                                                             {% csrf_token %}
-                                                            <img src="/{{ request.user.model_pic }}"
+                                                            {% with '/'|add:request.user.model_pic as image_static %}
+                                                                {% static image_static %}
+                                                            {% endwith %}
+                                                            <img src="{% static image_static %}"
                                                                  width="50"
                                                                  height="50"
                                                                  class="rounded-circle avatar"
