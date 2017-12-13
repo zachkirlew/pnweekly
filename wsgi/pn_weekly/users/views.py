@@ -182,10 +182,9 @@ def upload_pic(request):
 
             path = 'media/user_images/' + str(user_id) + '.png'
 
+            # remove old file from system
             if os.path.isfile(path):
                 os.remove(path)
-
-            # _delete_file('media/user_images/' + str(user_id) + '.png')
 
             user = CustomUser.objects.get(pk=user_id)
             user.model_pic = form.cleaned_data['image']
