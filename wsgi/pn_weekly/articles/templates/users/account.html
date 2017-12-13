@@ -21,7 +21,7 @@
                                                     <div class="text-center">
                                                         <form action="{% url 'upload_pic' %}" method="post"
                                                               enctype="multipart/form-data" id="form-upload-image">
-                                                            <img src="{% static image_static %}/{{ request.user.model_pic }}"
+                                                            <img src="{% static image_static %}media/{{ request.user.model_pic }}"
                                                                  width="50"
                                                                  height="50"
                                                                  class="rounded-circle avatar"
