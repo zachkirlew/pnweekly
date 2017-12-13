@@ -158,5 +158,6 @@ function checkRegAnswer(response) {
 
 function updateImageUI(userId) {
     // We break the cache and force the browser to check for the image again
+    console.log(new Date().getTime());
     $('#img-user-profile').attr('src', '/media/user_images/' + userId + '.png?' + new Date().getTime());
 }

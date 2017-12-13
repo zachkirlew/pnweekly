@@ -180,7 +180,12 @@ def upload_pic(request):
         if form.is_valid():
             user_id = request.user.id
 
-            #_delete_file('media/user_images/' + str(user_id) + '.png')
+            path = 'media/user_images/' + str(user_id) + '.png'
+
+            if os.path.isfile(path):
+                os.remove(path)
+
+            # _delete_file('media/user_images/' + str(user_id) + '.png')
 
             user = CustomUser.objects.get(pk=user_id)
             user.model_pic = form.cleaned_data['image']
@@ -188,12 +193,6 @@ def upload_pic(request):
 
             return HttpResponse(user.id)
     return HttpResponseForbidden('allowed only via PUT')
-
-
-# delete file from filesystem
-def _delete_file(path):
-    if os.path.isfile(path):
-        os.remove(path)
 
 
 @logged_in
