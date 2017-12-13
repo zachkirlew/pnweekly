@@ -1,16 +1,21 @@
+import os
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-from django.http import JsonResponse, HttpResponseRedirect, QueryDict
+from django.http import JsonResponse, HttpResponseRedirect, QueryDict, HttpResponseForbidden, HttpResponse
 from django.shortcuts import render, redirect
 
+from users.ImageUploadForm import ImageUploadForm
 from users.models import CustomUser
 
 appname = 'PN Weekly'
+
 
 # display signup page
 def signup(request):
     context = {'appname': appname}
     return render(request, 'users/signup.html', context)
+
 
 # register new user
 def register(request):
@@ -34,6 +39,7 @@ def register(request):
     request.session['password'] = password
     login(request, user)
     return HttpResponseRedirect('/')
+
 
 # log user in
 def user_login(request):
@@ -161,3 +167,35 @@ def edit_alerts(request):
 
     else:
         return JsonResponse({'status': 'false', 'message': "Method not allowed"})
+
+
+@logged_in
+def upload_pic(request):
+    if request.method == 'PUT':
+        put, files = request.parse_file_upload(request.META, request)
+        request.FILES.update(files)
+        request.PUT = put.dict()
+
+        form = ImageUploadForm(request.PUT, request.FILES)
+        if form.is_valid():
+            user_id = request.user.id
+
+            _delete_file('media/user_images/' + str(user_id) + '.png')
+
+            user = CustomUser.objects.get(pk=user_id)
+            user.model_pic = form.cleaned_data['image']
+            user.save()
+
+            return HttpResponse(user.id)
+    return HttpResponseForbidden('allowed only via POST')
+
+
+# delete file from filesystem
+def _delete_file(path):
+    if os.path.isfile(path):
+        os.remove(path)
+
+
+@logged_in
+def alerts(request):
+    return render(request, 'users/alerts.html')

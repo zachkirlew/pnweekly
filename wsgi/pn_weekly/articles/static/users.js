@@ -40,7 +40,6 @@ $(function () {
                 xhr.setRequestHeader("X-CSRFToken", $("input[name=csrfmiddlewaretoken]").val());
             },
             success: function (jsonResponse) {
-                console.log(jsonResponse);
                 $('#edit-account-info').html("<i class=\"fa fa-check\" style=\"color:green;\" aria-hidden=\"true\"></i> Updated account details</span>");
             },
             error: function (error) {
@@ -62,8 +61,6 @@ $(function () {
         var isSport = $('#checkbox-sport').is(":checked");
         var isTech = $('#checkbox-technology').is(":checked");
 
-        console.log(isSport);
-
         $.ajax({
             type: 'PUT',
             data: {
@@ -78,7 +75,6 @@ $(function () {
                 xhr.setRequestHeader("X-CSRFToken", $("input[name=csrfmiddlewaretoken]").val());
             },
             success: function (jsonResponse) {
-                console.log(jsonResponse);
                 $('#edit-alerts-info').html("<i class=\"fa fa-check\" style=\"color:green;\" aria-hidden=\"true\"></i> Updated email alert preferences</span>");
             },
             error: function (error) {
@@ -110,12 +106,47 @@ $(function () {
         $('#edit-account-info').html('');
     });
 
+
+    //When user submits profile picture
+    $("#upload_image").change(function (e) {
+
+        var data = new FormData($('#form-upload-image').get(0));
+
+        // only put file if image has been submitted
+        if (data.get('image').name !== '') {
+
+            $.ajax({
+                url: '/upload_pic/',
+                type: 'PUT',
+                data: data,
+                cache: false,
+                processData: false,
+                contentType: false,
+
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("X-CSRFToken", $("input[name=csrfmiddlewaretoken]").val());
+                },
+                success: function (response) {
+                    console.log(response);
+                    updateImageUI(response);
+                    $('#upload-image-info').html("<i class=\"fa fa-check\" style=\"color:green;\" aria-hidden=\"true\"></i> Successfully updated profile image</span>");
+
+                },
+                error: function (response) {
+                    $('#upload-image-info').html("<i class=\"fa fa-times\" style=\"color:red;\" aria-hidden=\"true\"></i> Could not upload your picture</span>");
+                }
+            });
+
+        }
+
+
+    });
+
 });
 
 // Check email availability json and send html response accordingly
 //Disable button to avoid user registration with non unique email
 function checkRegAnswer(response) {
-    console.log(response);
     if (response.is_available) {
         $('#info').html("<i class=\"fa fa-check\" style=\"color:green;\" aria-hidden=\"true\"></i> This email is available</span>");
         $('#button-signup-submit').prop('disabled', false);
@@ -123,4 +154,9 @@ function checkRegAnswer(response) {
         $('#info').html("<i class=\"fa fa-times\" style=\"color:red;\" aria-hidden=\"true\"></i> This email already exists on our system</span>");
         $('#button-signup-submit').prop('disabled', true);
     }
+}
+
+function updateImageUI(userId) {
+    // We break the cache and force the browser to check for the image again
+    $('#img-user-profile').attr('src', '/media/user_images/' + userId + '.png?' + new Date().getTime());
 }

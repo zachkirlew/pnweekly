@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^alerts/$', views.alerts, name='alerts'),
     # edit alerts
     url(r'^edit_alerts/$', views.edit_alerts, name='edit_alerts'),
+    # POST new profile picture
+    url(r'^upload_pic/$', views.upload_pic, name='upload_pic'),
 ]

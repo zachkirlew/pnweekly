@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
     <div class="container-fluid">
         <div class="container">
@@ -7,56 +7,101 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-6 offset-md-3">
+                            <div class="col-md-10 offset-md-1">
                                 <!-- form card login -->
                                 <div class="card card-outline-secondary">
                                     <div class="card-header">
                                         <h3 class="mb-0">Edit account details</h3>
                                     </div>
                                     <div class="card-block" style="padding: 30px;">
-                                        <form autocomplete="off" id="form-edit-account" method="POST" class="">
-                                            {% csrf_token %}
-                                            <div class="form-group">
-                                                <label class="col-lg-4 control-label" for="edit-first-name">First name:</label>
-                                                <div class="col-lg-10">
-                                                    <input name="first_name" required id="edit-first-name" class="form-control" type="text" value="{{ user.first_name }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="edit-last-name" class="col-lg-4 control-label">Last name:</label>
-                                                <div class="col-lg-10">
-                                                    <input name="last_name" required id="edit-last-name" class="form-control" type="text" value="{{ user.last_name }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="edit-phone" class="col-lg-4 control-label">Phone number:</label>
-                                                <div class="col-lg-10">
-                                                <div class="input-group mb-2 mb-sm-0">
-                                                    <div class="input-group-addon">+</div>
-                                                    <input  maxlength="12" required type="text" class="form-control" id="edit-phone" name="phone"
-                                                           placeholder="440123456789" value="{{ user.phone_number }}">
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="edit-email" class="col-lg-4 control-label">Email:</label>
-                                                <div class="col-lg-10">
-                                                    <input id="edit-email" class="form-control" type="text" readonly
-                                                           value="{{ user.email }}">
-                                                    <span id='edit-account-info'></span>
-                                                </div>
-                                            </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <!-- left column -->
+                                                <div class="col-md-3">
+                                                    <div class="text-center">
+                                                        <form action="{% url 'upload_pic' %}" method="post"
+                                                              enctype="multipart/form-data" id="form-upload-image">
+                                                            {% csrf_token %}
+                                                            <img src="/media/{{ request.user.model_pic }}"
+                                                                 width="50"
+                                                                 height="50"
+                                                                 class="rounded-circle avatar"
+                                                                 id="img-user-profile"
+                                                                 alt="avatar">
 
-                                            <div class="form-group">
-                                                <label class="col-md-3 control-label"></label>
-                                                <div class="col-md-8">
-                                                    <button type="submit" class="btn btn-primary" value="">Save Changes</button>
-                                                    <span></span>
+                                                            <h6>Upload a different photo...</h6>
 
+                                                            <input id="upload_image" type="file" name="image"
+                                                                   class="form-control" accept=".png">
+                                                        </form>
+                                                        <span id='upload-image-info'></span>
+                                                    </div>
                                                 </div>
 
+                                                <!-- edit form column -->
+                                                <div class="col-md-9 personal-info">
+                                                    <h3>Personal info</h3>
+
+                                                    <form autocomplete="off" id="form-edit-account" method="POST"
+                                                          class="">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <label class="col-lg-4 control-label" for="edit-first-name">First
+                                                                name:</label>
+                                                            <div class="col-lg-10">
+                                                                <input name="first_name" required id="edit-first-name"
+                                                                       class="form-control" type="text"
+                                                                       value="{{ user.first_name }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="edit-last-name" class="col-lg-4 control-label">Last
+                                                                name:</label>
+                                                            <div class="col-lg-10">
+                                                                <input name="last_name" required id="edit-last-name"
+                                                                       class="form-control" type="text"
+                                                                       value="{{ user.last_name }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="edit-phone" class="col-lg-4 control-label">Phone
+                                                                number:</label>
+                                                            <div class="col-lg-10">
+                                                                <div class="input-group mb-2 mb-sm-0">
+                                                                    <div class="input-group-addon">+</div>
+                                                                    <input maxlength="12" required type="text"
+                                                                           class="form-control" id="edit-phone"
+                                                                           name="phone"
+                                                                           placeholder="440123456789"
+                                                                           value="{{ user.phone_number }}">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="edit-email" class="col-lg-4 control-label">Email:</label>
+                                                            <div class="col-lg-10">
+                                                                <input id="edit-email" class="form-control" type="text"
+                                                                       readonly
+                                                                       value="{{ user.email }}">
+                                                                <span id='edit-account-info'></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 control-label"></label>
+                                                            <div class="col-md-8">
+                                                                <button type="submit" class="btn btn-primary" value="">
+                                                                    Save Changes
+                                                                </button>
+                                                                <span></span>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
 
                                     <!--/card-block-->

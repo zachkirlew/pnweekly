@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^post_comment/$', views.post_comment, name='post_comment'),
     # DELETE article comment
     url(r'^delete_comment/$', views.delete_comment, name='delete_comment'),
+
 ]

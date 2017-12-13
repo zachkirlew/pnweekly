@@ -1,3 +1,6 @@
+from uuid import uuid4
+
+import os
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.core.mail import send_mail
@@ -35,6 +38,20 @@ class CustomUserManager(BaseUserManager):
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
+
+    # allows renaming of user files for easy retrieval
+    def path_and_rename(instance, filename):
+        upload_to = 'user_images/'
+        ext = filename.split('.')[-1]
+        # get filename
+        if instance.pk:
+            filename = '{}.{}'.format(instance.pk, ext)
+        else:
+            # set filename as random string
+            filename = '{}.{}'.format(uuid4().hex, ext)
+            # return the whole path to the file
+        return os.path.join(upload_to, filename)
+
     email = models.EmailField(_('email address'), max_length=254, unique=True)
     first_name = models.CharField(_('first name'), max_length=30, blank=False)
     last_name = models.CharField(_('last name'), max_length=30, blank=False)
@@ -45,6 +62,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     music = models.BooleanField(default=False)
     sport = models.BooleanField(default=False)
     technology = models.BooleanField(default=False)
+    model_pic = models.ImageField(upload_to=path_and_rename, default='user_images/no_image.png')
 
     is_staff = models.BooleanField(_('staff status'), default=False,
                                    help_text=_('Designates whether the user can log into this admin '
@@ -72,3 +90,4 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def email_user(self, subject, message, from_email=None):
         send_mail(subject, message, from_email, [self.email])
+

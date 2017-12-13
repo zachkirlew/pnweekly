@@ -79,7 +79,7 @@ $(function () {
 });
 
 function addCommentToPage(comment) {
-    $('#container-comments').append('<div id="comment_' + comment.id + '" class="media mb-4"><input hidden value="' + comment.user.id + '" id="commenter-id"/><img height="50" width="50" class="d-flex mr-3 rounded-circle" src="../../static/images/user.png" alt=""><div class="media-body col-md-10"><h5 class="mt-0">' + comment.user.first_name + ' ' + comment.user.last_name + '</h5>' + comment.text + '</div><div class="media-body col-md-2"><button id="button-delete-comment" type="button" class="btn btn-danger btn-sm delete-button">Delete</button></div></div>');
+    $('#container-comments').append('<div id="comment_' + comment.id + '" class="media mb-4"><input hidden value="' + comment.user.id + '" id="commenter-id"/><img height="50" width="50" class="d-flex mr-3 rounded-circle" src="../../static/images/no_image.png" alt=""><div class="media-body col-md-10"><h5 class="mt-0">' + comment.user.first_name + ' ' + comment.user.last_name + '</h5>' + comment.text + '</div><div class="media-body col-md-2"><button id="button-delete-comment" type="button" class="btn btn-danger btn-sm delete-button">Delete</button></div></div>');
 }
 
 function removeCommentFromPage(commentId) {

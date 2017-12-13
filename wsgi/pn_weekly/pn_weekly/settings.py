@@ -20,14 +20,18 @@ BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
 WSGI_DIR = os.path.dirname(BASE_DIR)
 REPO_DIR = os.path.dirname(WSGI_DIR)
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 DATA_DIR = os.environ.get('OPENSHIFT_DATA_DIR', BASE_DIR)
 
 import sys
+
 sys.path.append(os.path.join(REPO_DIR, 'libs'))
 import json
 
-
-ALLOWED_HOSTS = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk','127.0.0.1', 'localhost', 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk']
+ALLOWED_HOSTS = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk', '127.0.0.1', 'localhost',
+                 'http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -36,9 +40,7 @@ ALLOWED_HOSTS = ['pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk','127.0.0.1', 'l
 SECRET_KEY = 'lv0*cph(@)w&nv=9d1a4^_=d+!&+5bi1bdu)^8bcx6-+!z=4r&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-
+DEBUG = True
 
 # Email config
 EMAIL_HOST = 'smtp.sendgrid.net'
@@ -47,10 +49,9 @@ EMAIL_HOST_PASSWORD = 'SG.5pZbiNiyQniG87vPF5i88A.CCYG1xzhThnjMFeLk652XCgvYW11jHK
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-
 # Application definition
 
-#http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk/
+# http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk/
 
 
 INSTALLED_APPS = [
@@ -96,7 +97,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pn_weekly.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -128,7 +128,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -141,7 +140,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
