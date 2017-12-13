@@ -53,9 +53,6 @@ EMAIL_USE_TLS = True
 
 # Application definition
 
-# http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk/
-
-
 INSTALLED_APPS = [
     'users',
     'articles',

@@ -10,9 +10,9 @@ setup(
     # GETTING-STARTED: set your app description:
     description='The dankest news app fo real',
     # GETTING-STARTED: set author name (your name):
-    author='Your Name',
+    author='Group 8',
     # GETTING-STARTED: set author email (your email):
-    author_email='example@example.com',
+    author_email='zach_kirlew@hotmail.co.uk',
     # GETTING-STARTED: set author url (your url):
     url='http://www.python.org/sigs/distutils-sig/',
     # GETTING-STARTED: define required django version:
