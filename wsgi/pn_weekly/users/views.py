@@ -172,22 +172,9 @@ def edit_alerts(request):
 @logged_in
 def upload_pic(request):
     if request.method == 'PUT':
-        put, files = request.parse_file_upload(request.META, request)
-        request.FILES.update(files)
-        request.PUT = put.dict()
 
-        form = ImageUploadForm(request.PUT, request.FILES)
-        if form.is_valid():
-            user_id = request.user.id
-
-            _delete_file('media/user_images/' + str(user_id) + '.png')
-
-            user = CustomUser.objects.get(pk=user_id)
-            user.model_pic = form.cleaned_data['image']
-            user.save()
-
-            return HttpResponse(user.id)
-    return HttpResponseForbidden('allowed only via POST')
+        return HttpResponse(2)
+    return HttpResponseForbidden('allowed only via PUT')
 
 
 # delete file from filesystem
