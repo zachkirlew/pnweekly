@@ -8,9 +8,3 @@ Features include:
 - News API Consumption
 - Email Alerts
 - Image Upload
-
-DEMO:
-
-    http://pnweekly-group8.apps.devcloud.eecs.qmul.ac.uk/
-
-
